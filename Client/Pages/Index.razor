@@ -3,9 +3,51 @@
 <PageTitle>Index</PageTitle>
 
         <!-- Header -->
+            <div id="header">
 
+                <!-- Inner -->
+                    <div class="inner">
+                        <header>
+                            <h1><a href="index.html" id="logo">Go Stark TV</a></h1>
+                            <hr />
+                            <p>YouTube's Least known Travel Vlogger</p>
+                        </header>
+                        <footer>
+                            <a href="#banner" class="button circled scrolly">Start</a>
+                        </footer>
+                    </div>
 
-            <section id="banner">
+                <!-- Nav -->
+                    <nav id="nav">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <!-- <li>
+                                <a href="#">Dropdown</a>
+                                <ul>
+                                    <li><a href="#">Lorem ipsum dolor</a></li>
+                                    <li><a href="#">Magna phasellus</a></li>
+                                    <li><a href="#">Etiam dolore nisl</a></li>
+                                    <li>
+                                        <a href="#">And a submenu &hellip;</a>
+                                        <ul>
+                                            <li><a href="#">Lorem ipsum dolor</a></li>
+                                            <li><a href="#">Phasellus consequat</a></li>
+                                            <li><a href="#">Magna phasellus</a></li>
+                                            <li><a href="#">Etiam dolore nisl</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Veroeros feugiat</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="left-sidebar.html">Left Sidebar</a></li>
+                            <li><a href="right-sidebar.html">Right Sidebar</a></li>
+                            <li><a href="no-sidebar.html">No Sidebar</a></li> -->
+                        </ul>
+                    </nav>
+
+            </div>
+
+            <section id="banner2">
                 <header>
                     <h2>Hi. You're looking at <strong>Go Stark TV</strong>.</h2>
                     <p>
@@ -29,26 +71,43 @@
   
                 </div>
             </section> *@
-                            @foreach (var article in articles)
-                {
-            				<div class="wrapper style2">
 
-					<article id="main" class="container special">
-						<a href="#" class="image featured"><img src="@article.ImageUrl" alt="" /></a>
+
+            	<div class="wrapper style1">
+					<section id="features" class="container special">
 						<header>
-							<h2><a href="#">@article.Title</a></h2>
-							<p>
-								@article.Description
-							</p>
+							<h2>Morbi ullamcorper et varius leo lacus</h2>
+							<p>Ipsum volutpat consectetur orci metus consequat imperdiet duis integer semper magna.</p>
 						</header>
+						<div class="row">
+                @foreach (var article in articles)
+                {
+                            <article class="col-4 col-12-mobile special">
+								<a href="#" class="image featured"><img src="@article.ImageUrl" alt="" /></a>
+								<header>
+									<h3><a href="#">@article.Title</a></h3>
+								</header>
+								<p>
+									@article.Description
+								</p>
+							</article>
 
-						<footer>
-							<a href="#" class="button">View On YouTube</a>
-						</footer>
-					</article>
+
+
+                }
+				</div>
+                	</section>
 
 				</div>
-                }
+                            <section id="banner">
+                <header>
+                    <h2>Hi. You're looking at <strong>Go Stark TV</strong>.</h2>
+                    <p>
+                        <!-- A (free) responsive site template by <a href="http://html5up.net">HTML5 UP</a>.
+                        Built with HTML5/CSS3 and released under the <a href="http://html5up.net/license">CCA</a> license. -->
+                    </p>
+                </header>
+            </section>
 @code {
     protected override void OnInitialized()
     {
