@@ -14,7 +14,7 @@
                     </p>
                 </header>
             </section>
-            <section class="carousel">
+            @* <section class="carousel">
                 <div class="reel">
                 @foreach (var article in articles)
                 {
@@ -28,7 +28,27 @@
                 }
   
                 </div>
-            </section>
+            </section> *@
+                            @foreach (var article in articles)
+                {
+            				<div class="wrapper style2">
+
+					<article id="main" class="container special">
+						<a href="#" class="image featured"><img src="@article.ImageUrl" alt="" /></a>
+						<header>
+							<h2><a href="#">@article.Title</a></h2>
+							<p>
+								@article.Description
+							</p>
+						</header>
+
+						<footer>
+							<a href="#" class="button">View On YouTube</a>
+						</footer>
+					</article>
+
+				</div>
+                }
 @code {
     protected override void OnInitialized()
     {
